@@ -1,16 +1,45 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-zinc-950 text-zinc-100 antialiased;
-    background-image: radial-gradient(circle at 50% -10%, rgba(163, 230, 53, 0.11), transparent 32rem);
+    @apply bg-zinc-950 text-zinc-100 antialiased selection:bg-lime-300 selection:text-zinc-950;
+    background-image: 
+      radial-gradient(circle at 50% -10%, rgba(163, 230, 53, 0.12), transparent 36rem),
+      radial-gradient(circle at 90% 40%, rgba(34, 211, 238, 0.04), transparent 28rem);
+    background-attachment: fixed;
   }
 }
 
 @layer components {
-  .eyebrow { @apply font-mono text-xs uppercase tracking-[0.28em] text-lime-300; }
-  .panel { @apply border border-white/10 bg-zinc-900/70 shadow-2xl shadow-black/20 backdrop-blur; }
+  .eyebrow { 
+    @apply font-mono text-xs uppercase tracking-[0.28em] text-lime-300; 
+  }
+  .panel { 
+    @apply border border-white/10 bg-zinc-900/70 shadow-2xl shadow-black/40 backdrop-blur-md; 
+  }
+}
+
+/* Custom scrollbar para o chat */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(163, 230, 53, 0.3);
 }

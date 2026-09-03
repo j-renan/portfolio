@@ -1,0 +1,22 @@
+{
+  "name": "renan-personal-page",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "daisyui": "^4.12.14",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@parcel/transformer-postcss": "^2.16.4",
+    "autoprefixer": "^10.4.20",
+    "parcel": "^2.16.4",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
+  }
+}
